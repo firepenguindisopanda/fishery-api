@@ -7,15 +7,16 @@ Fisherfolk table, Fish table, Caught, Sold
 
 ## Fisherfolk table attributes
 
-- fisherid - string
-- firstname - string
-- lastname - string
-- home address - string
-- phone - string
-- username - string
-- email - string
-- password - string
-- status - enum
+Field Name | Datatype | Other Information
+fisherid | AutoNumber | Primary Key
+firstname | string | field size: 100, required
+lastname | string | field size: 100, required
+home address | string | not required
+phone | string | field size: 11, not required
+username | string | field size: 20, required
+email | string | required
+password | string | required
+status | enum | required
 
 ## Fish table attributes
 
