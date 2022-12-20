@@ -17,12 +17,10 @@ module.exports = (sequelize, Sequelize) => {
             required: true
         },
         homeaddress: {
-            type: Sequelize.STRING,
-            required: true
+            type: Sequelize.STRING
         },
         phone: {
-            type: Sequelize.STRING,
-            required: true
+            type: Sequelize.STRING
         },
         password: {
             type: Sequelize.STRING,
