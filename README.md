@@ -24,6 +24,16 @@ Field Name | Datatype | Other Information
 FishId | AutoNumber | Primary Key
 FishName | String | field size 200, required
 
+## Fish Caught table attributes (Bridge Table)
+
+Field Name | Datatype | Other Information
+--- | --- | ---
+CaughtId | AutoNumber | Primary Key
+FishId | Integer | Foreign Key: fishid (Fish)
+FisherId | Integer | Foreign Key: fisherId (Fishfolk)
+Weight | Integer | required
+DateCaught | Date/Time | Date, required
+
 ## Packages Installed
 
 - npm install express sequelize pg pg-hstore body-parser cors jsonwebtoken bcryptjs --save
