@@ -8,6 +8,7 @@ Fisherfolk table, Fish table, Caught, Sold
 ## Fisherfolk table attributes
 
 Field Name | Datatype | Other Information
+--- | --- | ---
 fisherid | AutoNumber | Primary Key
 firstname | string | field size: 100, required
 lastname | string | field size: 100, required
