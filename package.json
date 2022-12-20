@@ -4,7 +4,8 @@
   "description": "A fish selling company api to provide data about the fishes and fishermen and sales",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.27.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
