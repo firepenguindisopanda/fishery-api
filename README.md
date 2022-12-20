@@ -17,6 +17,13 @@ Fisherfolk table, Fish table, Caught, Sold
 - password - string
 - status - enum
 
+## Fish table attributes
+
+Field Name | Datatype | Other Information
+--- | --- | ---
+FishId | AutoNumber | Primary Key
+FishName | String | field size 200, required
+
 ## Packages Installed
 
 - npm install express sequelize pg pg-hstore body-parser cors jsonwebtoken bcryptjs --save
