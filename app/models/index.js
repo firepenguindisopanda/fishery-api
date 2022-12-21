@@ -28,6 +28,7 @@ db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
 db.fish = require("../models/fish.model.js")(sequelize, Sequelize);
 db.fishcaught = require("../models/fishcaught.model.js")(sequelize, Sequelize);
+db.sold = require("../models/sold.model.js")(sequelize, Sequelize);
 
 // start of user and roles relationship
 db.role.belongsToMany(db.user, {
@@ -57,6 +58,23 @@ db.user.belongsToMany(db.fish, {
     otherKey: "fishid"
 });
 // end of user and fishcaught relationship
+
+// a fish can be sold by many users
+// start of fish and sold relationship
+db.fish.belongsToMany(db.user, {
+    through: db.sold,
+    foreignKey: "fishid",
+    otherKey: "userid"
+});
+// end of fish and sold relationship
+
+// start of user and sold relationship
+db.user.belongsToMany(db.fish, {
+    through: db.sold,
+    foreignKey: "userid",
+    otherKey: "fishid"
+});
+// end of user and sold relationship
 
 db.ROLES = ["user", "admin", "moderator"];
 
