@@ -20,3 +20,64 @@ const verifyToken = (req, res, next) => {
         next();
     });
 };
+
+const isAdmin = (req, res, next) => {
+    User.findByPk(req.userId).then(user => {
+        user.getRoles().then(roles => {
+            for(let role of roles){
+                if(role.name === "admin"){
+                    next();
+                    return;
+                }
+            }
+            res.status(403).send({
+                message: "Require Admin Role!"
+            });
+            return;
+        });
+    });
+};
+
+const isModerator = (req, res, next) => {
+    User.findByPk(req.userId).then(user => {
+        user.getRoles().then(roles => {
+            for(let role of roles){
+                if(role.name === "moderator"){
+                    next();
+                    return;
+                }
+            }
+            res.status(403).send({
+                message: "Require Moderator Role!"
+            });
+        });
+    });
+}
+
+const isModeratorOrAdmin = (req, res, next) => {
+    User.findByPk(req.userId).then(user => {
+        user.getRoles().then(roles => {
+            for(let role of roles){
+                if(role.name === "moderator"){
+                    next();
+                    return;
+                }
+                if(role.name === "admin"){
+                    next();
+                    return;
+                }
+            }
+            res.status(403).send({
+                message: "Require Moderator or Admin Role!"
+            });
+        });
+    });
+};
+
+const authJwt = {
+    verifyToken: verifyToken,
+    isAdmin: isAdmin,
+    isModerator: isModerator,
+    isModeratorOrAdmin: isModeratorOrAdmin
+};
+module.exports = authJwt;
