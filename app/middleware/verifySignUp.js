@@ -32,8 +32,24 @@ const checkDuplicateUsernameOrEmail = (req, res, next) => {
         });
     });
 }
+
+const checkRolesExisted = (req, res, next) => {
+    if(req.body.roles){
+        for(let role of req.body.roles){
+            if(!ROLES.includes(role)){
+                res.status(400).send({
+                    message: `Failed! Role ${role} does not exist!`
+                });
+                return;
+            }
+        }
+    }
+    next();
+}
+
 const verifySignUp = {
-    checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail
+    checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
+    checkRolesExisted: checkRolesExisted
 }
 
 module.exports = verifySignUp;
