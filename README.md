@@ -36,6 +36,17 @@ FisherId | Integer | Foreign Key: fisherId (Fishfolk)
 Weight | Integer | required
 DateCaught | Date/Time | Date, required
 
+## Fish Sold table attributes
+
+Field Name | Datatype | Other Information
+--- | --- | ---
+SoldId | AutNumber | Primary Key
+FishId | Number| Foreign Key: FishId (Fish)
+FisherId | Number | Foreign Key: FisherId (Fisherfolk)
+Weight | Number | standard
+Price | Number | Currency
+DateSold | Date/Time | Short Date
+
 ## Packages Installed
 
 - npm install express sequelize pg pg-hstore body-parser cors jsonwebtoken bcryptjs --save
