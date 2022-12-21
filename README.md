@@ -68,3 +68,7 @@ DateSold | Date/Time | Short Date
 - isModerator: determines if the user is a moderator, if the user isn't returns a message saying moderator role is required.
 
 - isModeratorOrAdmin: determines if user is a moderator or admin
+
+## Controllers
+
+- auth controller: Signup and Signin functions
