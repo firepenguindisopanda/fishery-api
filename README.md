@@ -72,6 +72,7 @@ DateSold | Date/Time | Short Date
 ## Controllers
 
 - auth controller: Signup and Signin functions
-    - To Signup a user weneed jwt for the token and bcrypt to hash the password. We need the two models User and Role because when a user signsup they should be given a role.
+    - To Signup a user we need jwt for the token and bcrypt to hash the password. We need the two models User and Role because when a user signsup they should be given a role.
     - To Signup we need to hash the password then create a the user with data that is passed by the request parameters. Then we need to retrieve the roles from the request paramters. After we use the Role model to create a query to find the roles in the table. The query will assign the roles to the User object. The roles are associated to the ones passed by the request parameters.
     - A default role is set if none is provided. The default role is a 'user' role
+    - To Signin a user we need to check if user is registered, if the password is accurate, assign a token to user and get roles.
