@@ -80,3 +80,4 @@ DateSold | Date/Time | Short Date
     - All Access function: This function provides public content for users that aren't logged in.
     - User Board function: This function provides content for a user that is registered / has an account and has the user, moderator and admin role.
     - Moderator Board function: This function provides content for a user that is registered / has an account and has the user, moderator roles.
+    - Admin Board function: This function provides content for a user that is registered / has an account and has the user, admin roles.
