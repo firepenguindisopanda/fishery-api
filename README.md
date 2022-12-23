@@ -77,3 +77,4 @@ DateSold | Date/Time | Short Date
     - A default role is set if none is provided. The default role is a 'user' role
     - To Signin a user we need to check if user is registered, if the password is accurate, assign a token to user and get roles.
 - User Controller:
+    - All Access function: This function provides public content for users that aren't logged in.
