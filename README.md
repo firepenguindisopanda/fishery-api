@@ -78,3 +78,4 @@ DateSold | Date/Time | Short Date
     - To Signin a user we need to check if user is registered, if the password is accurate, assign a token to user and get roles.
 - User Controller:
     - All Access function: This function provides public content for users that aren't logged in.
+    - User Board function: This function provides content for a user that is registered / has an account and has the user role.
