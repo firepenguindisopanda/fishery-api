@@ -81,3 +81,10 @@ DateSold | Date/Time | Short Date
     - User Board function: This function provides content for a user that is registered / has an account and has the user, moderator and admin role.
     - Moderator Board function: This function provides content for a user that is registered / has an account and has the user, moderator roles.
     - Admin Board function: This function provides content for a user that is registered / has an account and has the user, admin roles.
+
+## Routes
+
+- Auth Routes:
+    - create a custom middleware to add relevant headers to reaponses
+    - define the route for sign up and provide controller for signup and middleware for verification.
+    - define the route for sign in and provide controller for sign in
