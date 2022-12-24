@@ -90,3 +90,4 @@ DateSold | Date/Time | Short Date
     - define the route for sign in and provide controller for sign in
 - Authorization User Routes:
     - create a custom middleware to add headers to response.
+    - /api/test/all: use allAccess controller to display content for anyone to view.
