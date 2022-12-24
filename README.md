@@ -91,3 +91,4 @@ DateSold | Date/Time | Short Date
 - Authorization User Routes:
     - create a custom middleware to add headers to response.
     - /api/test/all: use allAccess controller to display content for anyone to view.
+    - /api/test/user: use authJwt middleware to verify token for access to accounts that have a user role. use userBoard controller.
