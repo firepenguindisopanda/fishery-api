@@ -89,4 +89,4 @@ DateSold | Date/Time | Short Date
     - define the route for sign up and provide controller for signup and middleware for verification.
     - define the route for sign in and provide controller for sign in
 - Authorization User Routes:
-    - 
+    - create a custom middleware to add headers to response.
