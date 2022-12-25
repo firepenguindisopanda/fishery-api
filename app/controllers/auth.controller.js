@@ -16,9 +16,25 @@ exports.signup = (req, res) => {
      * - then save the user to the database
      */
     let hashedpwd = bcrypt.hashSync(req.body.password, 8);
+    /**
+     * firstname, lastname, username, email, password are required
+     * check if these fields are empty.
+     * if empty, return an error message
+     * if not empty, continue
+     */
+
+    if(!req.body.firstname || !req.body.lastname || !req.body.username || !req.body.email || !req.body.password){
+        return res.status(400).send({message: "Please fill all required fields!"});
+    }
+
+
     User.create({
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
         username: req.body.username,
         email: req.body.email,
+        homeaddress: req.body.homeaddress ? req.body.homeaddress : 'N/A',
+        phone: req.body.phone ? req.body.phone : 'N/A',
         password: hashedpwd
     }).then(user => {
         if(req.body.roles){
@@ -60,8 +76,8 @@ exports.signin = (req, res) => {
         });
         let authorities = [];
         user.getRoles().then(roles => {
-            for(let i = 0; i < roles.length; i++){
-                authorities.push("ROLE_" + roles[i].name.toUpperCase());
+            for(const element of roles){
+                authorities.push("ROLE_" + element.name.toUpperCase());
             }
             res.status(200).send({
                 id: user.id,
