@@ -94,3 +94,5 @@ DateSold | Date/Time | Short Date
     - /api/test/user: use authJwt middleware to verify token for access to accounts that have a user role. use userBoard controller.
     - /api/test/mod: use authJwt middleware to verify token for a real account. use isModerator middleware to determine if they are a mod. use moderatorBoard controller.
     - /api/test/admin: use authJwt middleware to verify token for a real account. use isAdmin middleware to determine if they are an admin. use adminBoard controller.
+
+## Refresh Yoken
