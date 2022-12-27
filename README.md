@@ -98,3 +98,9 @@ DateSold | Date/Time | Short Date
 ## Refresh Yoken
 
 Steps to implement Refresh Token
+
+### Added config/auth.config.js
+
+- secret => string
+- expiration time => 1 hour
+- refresh token expiration time => 24 hours
