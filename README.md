@@ -96,3 +96,5 @@ DateSold | Date/Time | Short Date
     - /api/test/admin: use authJwt middleware to verify token for a real account. use isAdmin middleware to determine if they are an admin. use adminBoard controller.
 
 ## Refresh Yoken
+
+Steps to implement Refresh Token
