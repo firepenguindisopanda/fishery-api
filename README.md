@@ -95,7 +95,7 @@ DateSold | Date/Time | Short Date
     - /api/test/mod: use authJwt middleware to verify token for a real account. use isModerator middleware to determine if they are a mod. use moderatorBoard controller.
     - /api/test/admin: use authJwt middleware to verify token for a real account. use isAdmin middleware to determine if they are an admin. use adminBoard controller.
 
-## Refresh Yoken
+## Refresh Token
 
 Steps to implement Refresh Token
 
@@ -104,3 +104,8 @@ Steps to implement Refresh Token
 - secret => string
 - expiration time => 1 hour
 - refresh token expiration time => 24 hours
+
+### Added middleware catch error function middleware/authJwt.js
+
+- Import TokenExpiredError
+- catchError (function) => if err is an instanceof TokenExpiredError return message Access Token expired else send message unauthorized
