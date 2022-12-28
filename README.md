@@ -109,3 +109,7 @@ Steps to implement Refresh Token
 
 - Import TokenExpiredError
 - catchError (function) => if err is an instanceof TokenExpiredError return message Access Token expired else send message unauthorized
+
+### Refresh Token Model
+
+- It has a one to one relationship with a user
