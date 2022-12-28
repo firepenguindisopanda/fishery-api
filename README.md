@@ -115,3 +115,14 @@ Steps to implement Refresh Token
 - It has a one to one relationship with a user
 - Attributes => token (String) and expiryDate (Date)
 - Add association with User in models/index.js using belongsTo() and hasOne()
+
+```javascript
+db.refreshToken.belongsTo(db.user, {
+  foreignKey: 'userId',
+  targetKey: 'id',
+});
+db.user.hasOne(db.refreshToken, {
+  foreignKey: 'userId',
+  targetKey: 'id',
+});
+```
