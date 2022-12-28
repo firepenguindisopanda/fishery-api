@@ -113,3 +113,5 @@ Steps to implement Refresh Token
 ### Refresh Token Model
 
 - It has a one to one relationship with a user
+- Attributes => token (String) and expiryDate (Date)
+- Add association with User in models/index.js using belongsTo() and hasOne()
