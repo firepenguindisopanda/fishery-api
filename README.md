@@ -126,3 +126,8 @@ db.user.hasOne(db.refreshToken, {
   targetKey: 'id',
 });
 ```
+
+### Implement Refresh Token in API
+
+- Update the payloads in Auth Controller
+- Add Route for JWT Refresh Token
