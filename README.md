@@ -81,6 +81,8 @@ DateSold | Date/Time | Short Date
     - User Board function: This function provides content for a user that is registered / has an account and has the user, moderator and admin role.
     - Moderator Board function: This function provides content for a user that is registered / has an account and has the user, moderator roles.
     - Admin Board function: This function provides content for a user that is registered / has an account and has the user, admin roles.
+- Fish Controller:
+    - Fish Content: This function should provide all information of fish recorded.
 
 ## Routes
 
