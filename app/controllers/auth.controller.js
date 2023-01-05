@@ -23,7 +23,6 @@ exports.signup = (req, res) => {
      * if empty, return an error message
      * if not empty, continue
      */
-
     if(!req.body.firstname || !req.body.lastname || !req.body.username || !req.body.email || !req.body.password){
         return res.status(400).send({message: "Please fill all required fields!"});
     }
