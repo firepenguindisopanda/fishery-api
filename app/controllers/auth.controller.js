@@ -46,12 +46,12 @@ exports.signup = (req, res) => {
                 }
             }).then(roles => {
                 user.setRoles(roles).then(() => {
-                    res.send({message: "User registered successfully!"});
+                    res.status(201).send({message: "User registered successfully!"});
                 });
             });
         }else{
             user.setRoles([1]).then(() => {
-                res.send({message: "User registered successfully!"});
+                res.status(201).send({message: "User registered successfully!"});
             });
         }
     }).catch(err => {
