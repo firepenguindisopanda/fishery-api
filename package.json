@@ -4,7 +4,7 @@
   "description": "A fish selling company api to provide data about the fishes and fishermen and sales",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "dev": "nodemon app/server.js",
     "start": "node app/server.js"
   },
